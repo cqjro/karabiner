@@ -2,6 +2,10 @@ import fs from "fs";
 import { KarabinerRules } from "./types";
 import { createHyperSubLayers, app, open } from "./utils";
 
+// TODO: Fix the raycast section and add more functionality
+// TODO: System control for trackpad gestures
+
+
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
   {
@@ -18,11 +22,11 @@ const rules: KarabinerRules[] = [
             modifiers: ["left_command", "left_control", "left_option"],
           },
         ],
-        // to_if_alone: [
-        //   {
-        //     key_code: "escape",
-        //   },
-        // ],
+        to_if_alone: [
+          {
+            key_code: "caps_lock",
+          },
+        ],
         type: "basic",
       },
       //      {
@@ -54,7 +58,8 @@ const rules: KarabinerRules[] = [
       s: app("Spotify"),
       w: app("WhatsApp"),
       e: app("Microsoft Excel"),
-      r: app("OBS")
+      r: app("Microsoft Remote Desktop"),
+      b: app("OBS"),
     },
 
     // s = "System"
@@ -169,7 +174,7 @@ const rules: KarabinerRules[] = [
 
     // r = "Raycast"
     r: {
-      s: open("raycast://extensions/downloads-manager/show-latest-download"),
+      s: open("raycast://extensions/downloads-manager/show-latest-download"), // this doesnt work
     },
   }),
 ];
