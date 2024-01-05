@@ -24,7 +24,7 @@ const rules: KarabinerRules[] = [
         ],
         to_if_alone: [
           {
-            key_code: "caps_lock",
+            key_code: "escape",
           },
         ],
         type: "basic",
@@ -59,7 +59,7 @@ const rules: KarabinerRules[] = [
       w: app("WhatsApp"),
       e: app("Microsoft Excel"),
       r: app("Microsoft Remote Desktop"),
-      b: app("OBS"),
+      b: app("Obsidian"),
     },
 
     // s = "System"
