@@ -60,6 +60,8 @@ const rules: KarabinerRules[] = [
       e: app("Microsoft Excel"),
       r: app("Microsoft Remote Desktop"),
       b: app("Obsidian"),
+      f: app("Finder"),
+      p: app("Preview"),
     },
 
     // s = "System"
@@ -127,7 +129,7 @@ const rules: KarabinerRules[] = [
 
     // v = "moVe" which isn't "m" because we want it to be on the left hand
     // so that hjkl work like they do in vim
-    v: {
+    d: {
       h: {
         to: [{ key_code: "left_arrow" }],
       },
