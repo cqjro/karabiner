@@ -2,8 +2,9 @@ import fs from "fs";
 import { KarabinerRules } from "./types";
 import { createHyperSubLayers, app, open, rectangle } from "./utils";
 
-// TODO: Fix the raycast section and add more functionality
-// TODO: System control for trackpad gestures
+// TODO: System control for trackpad gestures]
+// TODO: Add way to switch between desktops
+// TODO: Add way to have altab functionality using hyperkey
 
 
 const rules: KarabinerRules[] = [
