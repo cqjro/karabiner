@@ -1,6 +1,6 @@
 import fs from "fs";
 import { KarabinerRules } from "./types";
-import { createHyperSubLayers, app, open } from "./utils";
+import { createHyperSubLayers, app, open, rectangle } from "./utils";
 
 // TODO: Fix the raycast section and add more functionality
 // TODO: System control for trackpad gestures
@@ -58,10 +58,11 @@ const rules: KarabinerRules[] = [
       s: app("Spotify"),
       w: app("WhatsApp"),
       e: app("Microsoft Excel"),
-      r: app("Microsoft Remote Desktop"),
+      j: app("Microsoft Remote Desktop"), // there isn't a good key for this
       b: app("Obsidian"),
       f: app("Finder"),
       p: app("Preview"),
+      r: app("Raycast"),
     },
 
     // s = "System"
@@ -125,9 +126,91 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
+      m: {
+        to: [
+          {
+            // Emoji picker
+            key_code: "mute",
+          },
+        ],
+      },
     },
 
-    // v = "moVe" which isn't "m" because we want it to be on the left hand
+    w: {
+      semicolon: {
+        description: "Window: Hide",
+        to: [
+          {
+            key_code: "h",
+            modifiers: ["right_command"],
+          },
+        ],
+      },
+      y: rectangle("first-third"),
+      k: rectangle("top-half"),
+      j: rectangle("bottom-half"),
+      o: rectangle("last-third"),
+      h: rectangle("left-half"),
+      l: rectangle("right-half"),
+      return_or_enter: rectangle("maximize"),
+      u: {
+        description: "Window: Previous Tab",
+        to: [
+          {
+            key_code: "tab",
+            modifiers: ["right_control", "right_shift"],
+          },
+        ],
+      },
+      i: {
+        description: "Window: Next Tab",
+        to: [
+          {
+            key_code: "tab",
+            modifiers: ["right_control"],
+          },
+        ],
+      },
+      n: {
+        description: "Window: Next Window",
+        to: [
+          {
+            key_code: "grave_accent_and_tilde",
+            modifiers: ["right_command"],
+          },
+        ],
+      },
+      b: {
+        description: "Window: Back",
+        to: [
+          {
+            key_code: "open_bracket",
+            modifiers: ["right_command"],
+          },
+        ],
+      },
+      // Note: No literal connection. Both f and n are already taken.
+      m: {
+        description: "Window: Forward",
+        to: [
+          {
+            key_code: "close_bracket",
+            modifiers: ["right_command"],
+          },
+        ],
+      },
+      d: {
+        description: "Window: Next display",
+        to: [
+          {
+            key_code: "right_arrow",
+            modifiers: ["right_control", "right_option", "right_command"],
+          },
+        ],
+      },
+    },
+
+    // d = "move" which isn't "m" because we want it to be on the left hand
     // so that hjkl work like they do in vim
     d: {
       h: {
@@ -176,7 +259,10 @@ const rules: KarabinerRules[] = [
 
     // r = "Raycast"
     r: {
-      s: open("raycast://extensions/downloads-manager/show-latest-download"), // this doesnt work
+      l: open("raycast://extensions/thomas/downloads-manager/show-latest-download"), // this does work
+      s: open("raycast://extensions/asubbotin/shell/index?arguments=%7B%22command%22%3A%22%22%7D"),
+      g: open("raycast://extensions/mblode/google-search/index"),
+      f: open("raycast://extensions/raycast/file-search/search-files"),
     },
   }),
 ];
