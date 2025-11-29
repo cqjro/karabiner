@@ -57,7 +57,7 @@ const rules: KarabinerRules[] = [
       z: app("Zen"),
       m: app("Messages"), // "i"Message
       s: app("Spotify"),
-      w: app("WhatsApp"),
+      w: app("Microsoft Word"),
       e: app("Microsoft Excel"),
       j: app("Microsoft Remote Desktop"), // there isn't a good key for this
       b: app("Obsidian"),

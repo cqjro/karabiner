@@ -98,6 +98,30 @@
               {
                 "to": [
                   {
+                    "shell_command": "open -a 'Arc.app'"
+                  }
+                ],
+                "description": "Open -a 'Arc.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "a",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_o",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
                     "shell_command": "open -a 'Visual Studio Code.app'"
                   }
                 ],
@@ -242,10 +266,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Microsoft Word.app'"
+                    "shell_command": "open -a 'WhatsApp.app'"
                   }
                 ],
-                "description": "Open -a 'Microsoft Word.app'",
+                "description": "Open -a 'WhatsApp.app'",
                 "type": "basic",
                 "from": {
                   "key_code": "w",
