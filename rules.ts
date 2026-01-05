@@ -62,7 +62,7 @@ const rules: KarabinerRules[] = [
       j: app("Microsoft Remote Desktop"), // there isn't a good key for this
       b: app("Obsidian"),
       f: app("Finder"),
-      p: app("Preview"),
+      p: app("Proton Mail"),
       r: app("Raycast"),
     },
 
