@@ -64,6 +64,7 @@ const rules: KarabinerRules[] = [
       f: app("Finder"),
       p: app("Proton Mail"),
       r: app("Raycast"),
+      n: app("sioyek"),
     },
 
     // s = "System"
